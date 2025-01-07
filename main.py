@@ -13,9 +13,11 @@ class Event:
             self.time = time
 
 def update(day, month, event_time, name):
-    f = open('calendar.txt', 'w')
-    calendar = json.loads(f.read())
-    selected = calendar[month-1][day-1]
+    f = open('calendar.json')
+    print(f.read())
+    calendar = json.load(f)
+    print(calendar)
+    '''selected = calendar[month-1][day-1]
     new = (list(selected.values())[0])
     new.append({event_time:name})
     calendar[month-1].remove(selected)
@@ -24,7 +26,7 @@ def update(day, month, event_time, name):
     f.close()
     print(f"Added {name} at {event_time} on {day}/{month}.")
     time.sleep(3)
-    os.system('clear')
+    os.system('clear')'''
     
 
 

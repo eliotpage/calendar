@@ -1,6 +1,6 @@
 def init(year):
     import json
-    f = open('calendar.txt', 'w')
+    f = open('calendar.json')
 
     month_lengths = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30]
 
